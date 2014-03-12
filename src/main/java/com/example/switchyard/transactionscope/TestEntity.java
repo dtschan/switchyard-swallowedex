@@ -19,6 +19,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PostPersist;
+import javax.validation.constraints.Min;
 
 /**
  * Simple test entity used by TransactionScopeTest.
@@ -56,6 +57,7 @@ public class TestEntity {
         this.name = name;
     }
 
+    @Min(0)
     public int getAge() {
         return age;
     }

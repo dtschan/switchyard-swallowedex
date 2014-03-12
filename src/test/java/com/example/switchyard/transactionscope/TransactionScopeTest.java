@@ -42,7 +42,7 @@ import org.switchyard.component.bean.Reference;
  */
 @RunWith(Arquillian.class)
 public class TransactionScopeTest {
-    private static final String JAR_FILE = "target/switchyard-transactionscope-0.0.1-SNAPSHOT.jar";
+    private static final String JAR_FILE = "target/switchyard-swallowedex-0.0.1-SNAPSHOT.jar";
 
     @PersistenceContext
     EntityManager entityManager;
@@ -78,7 +78,7 @@ public class TransactionScopeTest {
             entityManager.setFlushMode(FlushModeType.COMMIT);
             entityManager.joinTransaction();
 
-            TestEntity entity1 = new TestEntity("John", 42);
+            TestEntity entity1 = new TestEntity("John", -1);
 
             storeService.store(entity1);
 

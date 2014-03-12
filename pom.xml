@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example.switchyard</groupId>
-  <artifactId>switchyard-transactionscope</artifactId>
+  <artifactId>switchyard-swallowedex</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>com.example.switchyard:switchyard-transactionscope</name>
+  <name>com.example.switchyard:switchyard-swallowedex</name>
   <properties>
-    <switchyard.version>1.1.0.M3-redhat-2</switchyard.version>
+    <switchyard.version>1.1.1-p5-redhat-1</switchyard.version>
     <junit.version>4.11</junit.version>
   </properties>
   <dependencyManagement>
@@ -84,6 +84,11 @@
     <dependency>
       <groupId>org.jboss.arquillian.junit</groupId>
       <artifactId>arquillian-junit-container</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.arquillian.protocol</groupId>
+      <artifactId>arquillian-protocol-servlet</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
